@@ -1,0 +1,232 @@
+:root {
+    --bg-black: #000;
+    --white-soft: #f0f0f0;
+    --gray-deep: #121212;
+    --gray-text: #999;
+    --red-dark: #8b0000;
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--bg-black);
+    color: var(--white-soft);
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-deep);
+    z-index: 999;
+  }
+  
+  .logo {
+    height: 60px;
+    filter: drop-shadow(0 0 6px #ffffff88);
+  }
+  
+  nav a {
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--white-soft);
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--red-dark);
+  }
+  
+  section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .hero {
+    background: url('https://images.unsplash.com/photo-1607703703803-ec9fdb062fa0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 0;
+  }
+  
+  .hero .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero h2 {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    margin-bottom: 2rem;
+  }
+  
+  .cta {
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--red-dark);
+    color: var(--red-dark);
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover {
+    background: var(--red-dark);
+    color: var(--bg-black);
+  }
+  
+  h3 {
+    font-family: var(--font-title);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Nova seção de serviços */
+  .clean-icons .icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--red-dark);
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    background-color: var(--gray-deep);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-left: 3px solid var(--red-dark);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    color: var(--white-soft);
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+  }
+  
+  /* Casos */
+  .cases .card {
+    background: var(--gray-deep);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--red-dark);
+  }
+  
+  .cases small.note {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--gray-text);
+  }
+  
+  /* Sobre */
+  .about p {
+    margin-bottom: 1rem;
+    color: var(--gray-text);
+  }
+  
+  /* Contato */
+  .contact {
+    text-align: center;
+  }
+  
+  .contact p {
+    margin-bottom: 2rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--gray-deep);
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--gray-text);
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: var(--red-dark);
+  }
+  
+  footer .legal {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #222;
+    padding-top: 1rem;
+    color: var(--gray-text);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    nav a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .hero h2 {
+      font-size: 2.2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
